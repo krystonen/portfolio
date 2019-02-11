@@ -34,4 +34,8 @@ class CatalogsController < ApplicationController
     end
   end
 
+  def show
+    @catalog_item = Catalog.find(params[:id])
+  end
+
 end

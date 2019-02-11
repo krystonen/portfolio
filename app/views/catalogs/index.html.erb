@@ -3,11 +3,11 @@
 <%= link_to "Create New Item", new_catalog_url %>
 
 <% @catalog_items.each do |item| %>
-  <p><%= item.title %></p>
+  <p><%= link_to item.title, catalog_path(item) %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
   <p><%= image_tag item.thumb_image unless item.thumb_image.nil? %></p>
   <p><%#= image_tag item.main_image unless item.main_image.nil? %></p>
-  <%= link_to "Edit", edit_catalog_path(item.id) %>
+  <%= link_to "Edit", edit_catalog_path(item) %>
 <% end %>
 
