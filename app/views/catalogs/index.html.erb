@@ -4,7 +4,7 @@
   <p><%= item.title %></p>
   <p><%= item.subtitle %></p>
   <p><%= item.body %></p>
-  <p><%= image_tag item.thumb_image %></p>
-  <p><%= image_tag item.main_image %></p>
+  <p><%= image_tag item.thumb_image unless item.thumb_image.nil? %></p>
+  <p><%= image_tag item.main_image unless item.main_image.nil? %></p>
 <% end %>
 
