@@ -38,4 +38,12 @@ class CatalogsController < ApplicationController
     @catalog_item = Catalog.find(params[:id])
   end
 
+  def destroy
+    @catalog_item = Catalog.find(params[:id])
+    @catalog_item.destroy
+    respond_to do |format|
+      format.html { redirect_to catalogs_url, notice: 'Portfolio item was successfully removed.' }
+    end
+  end
+
 end
