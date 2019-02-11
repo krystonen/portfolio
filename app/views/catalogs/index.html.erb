@@ -1,0 +1,10 @@
+<h1> Portfolio Items </h1>
+
+<% @catalog_items.each do |item| %>
+  <p><%= item.title %></p>
+  <p><%= item.subtitle %></p>
+  <p><%= item.body %></p>
+  <p><%= image_tag item.thumb_image %></p>
+  <p><%= image_tag item.main_image %></p>
+<% end %>
+
