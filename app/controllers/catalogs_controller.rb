@@ -13,11 +13,25 @@ class CatalogsController < ApplicationController
     respond_to do |format|
       if @catalog_item.save
         format.html { redirect_to catalogs_path, notice: 'Your portfolio item is now live.' }
-        # format.json { render :show, status: :created, location: @catalog }
       else
         format.html { render :new }
-        # format.json { render json: @catalog.errors, status: :unprocessable_entity }
       end
     end
   end
+
+  def edit
+    @catalog_item = Catalog.find(params[:id])
+  end
+
+  def update
+    @catalog_item = Catalog.find(params[:id])
+    respond_to do |format|
+      if @catalog_item.update(params.require(:catalog).permit(:title, :subtitle, :body))
+        format.html { redirect_to catalogs_path, notice: 'Your portfolio item was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
+
 end
