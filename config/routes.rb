@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'about-me', to: 'pages#about'
   get 'contact', to: 'pages#contact'
 
-  resources :catalogs
+  resources :catalogs, except: [:show]
+  get 'portfolio/:id', to: 'catalogs#show', as: 'portfolio_show'
+
   resources :blogs
 end
