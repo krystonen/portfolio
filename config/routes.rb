@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :catalogs, path: 'portfolios', except: [:show]
   get 'portfolio/:id', to: 'catalogs#show', as: 'portfolio_show'
+  get 'angular-items', to: 'catalogs#angular'
 
   resources :blogs do
     member do

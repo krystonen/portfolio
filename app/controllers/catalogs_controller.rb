@@ -3,6 +3,10 @@ class CatalogsController < ApplicationController
     @catalog_items = Catalog.all
   end
 
+  def angular
+    @angular_catalog_items = Catalog.angular
+  end
+
   def new
     @catalog_item = Catalog.new
   end
