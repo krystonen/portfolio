@@ -51,4 +51,16 @@ end
     thumb_image: "https://placehold.it/350x200"
   )
 end
-  puts "9 times portfolio items created"
+
+puts "9 times portfolio items created"
+
+3.times do |technology|
+  Catalog.last.technologies.create!(
+    name: "Technology #{technology}",
+    )
+end
+
+puts "2 times technologies created"
+
+
+
