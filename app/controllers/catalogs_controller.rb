@@ -9,10 +9,11 @@ class CatalogsController < ApplicationController
 
   def new
     @catalog_item = Catalog.new
+    3.times {@catalog_item.technologies.build}
   end
 
   def create
-    @catalog_item = Catalog.new(params.require(:catalog).permit(:title, :subtitle, :body))
+    @catalog_item = Catalog.new(params.require(:catalog).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
 
     respond_to do |format|
       if @catalog_item.save
