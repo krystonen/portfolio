@@ -13,7 +13,7 @@ class CatalogsController < ApplicationController
   end
 
   def create
-    @catalog_item = Catalog.new(params.require(:catalog).permit(:title, :subtitle, :body, technologies_attributes: [:name]))
+    @catalog_item = Catalog.new(catalog_params)
 
     respond_to do |format|
       if @catalog_item.save
@@ -31,7 +31,7 @@ class CatalogsController < ApplicationController
   def update
     @catalog_item = Catalog.find(params[:id])
     respond_to do |format|
-      if @catalog_item.update(params.require(:catalog).permit(:title, :subtitle, :body))
+      if @catalog_item.update(catalog_params)
         format.html { redirect_to catalogs_path, notice: 'Your portfolio item was successfully updated.' }
       else
         format.html { render :edit }
@@ -51,4 +51,8 @@ class CatalogsController < ApplicationController
     end
   end
 
+  private
+    def catalog_params
+      params.require(:catalog).permit(:title, :subtitle, :body, technologies_attributes:[:name])
+    end
 end
