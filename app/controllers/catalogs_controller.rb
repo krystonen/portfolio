@@ -1,5 +1,7 @@
 class CatalogsController < ApplicationController
+  before_action :set_catalog_item, only: [:edit, :update, :show, :destroy]
   layout 'catalog'
+
   def index
     @catalog_items = Catalog.all
   end
@@ -26,11 +28,9 @@ class CatalogsController < ApplicationController
   end
 
   def edit
-    @catalog_item = Catalog.find(params[:id])
   end
 
   def update
-    @catalog_item = Catalog.find(params[:id])
     respond_to do |format|
       if @catalog_item.update(catalog_params)
         format.html { redirect_to catalogs_path, notice: 'Your portfolio item was successfully updated.' }
@@ -41,11 +41,9 @@ class CatalogsController < ApplicationController
   end
 
   def show
-    @catalog_item = Catalog.find(params[:id])
   end
 
   def destroy
-    @catalog_item = Catalog.find(params[:id])
     @catalog_item.destroy
     respond_to do |format|
       format.html { redirect_to catalogs_url, notice: 'Portfolio item was successfully removed.' }
@@ -55,5 +53,8 @@ class CatalogsController < ApplicationController
   private
     def catalog_params
       params.require(:catalog).permit(:title, :subtitle, :body, technologies_attributes:[:name])
+    end
+    def set_catalog_item
+      @catalog_item = Catalog.find(params[:id])
     end
 end
