@@ -20,6 +20,9 @@ module ApplicationHelper
     end
   end
 
+  def copyright_generator
+    @copyright = KovariViewTool::Renderer.copyright 'Krisztina Kovari', 'All rights reserved'
+  end
   # def content_helper
   #   content_tag(:div, "My content", class: "my-class")
   # end
