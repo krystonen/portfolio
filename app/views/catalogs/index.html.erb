@@ -1,5 +1,5 @@
 <h1> Portfolio Items </h1>
 
-<%= link_to "Create New Item", new_catalog_url %>
+<%= link_to "Create New Item", new_catalog_url if logged_in?(:site_admin) %>
 
 <%= render partial: 'catalog_item', collection: @catalog_items %>
