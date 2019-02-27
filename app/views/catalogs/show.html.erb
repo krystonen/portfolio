@@ -1,10 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-7">
+      <%= image_tag @catalog_item.main_image, class:"img-fluid" %>
+    </div>
 
-<%= image_tag @catalog_item.main_image %>
-<h1> <%= @catalog_item.title %> </h1>
-<em> <%= @catalog_item.subtitle %> </em>
-<p> <%= @catalog_item.body %> </p>
+    <div class="col-sm-5">
+     <h1> <%= @catalog_item.title %> </h1>
 
-<h2>Technologies used</h2>
-<% @catalog_item.technologies.each do |t| %>
-  <p>  <%= t.name %> </p>
-<% end %>
+      <hr>
+
+      <em> <%= @catalog_item.subtitle %> </em>
+      <p> <%= @catalog_item.body %> </p>
+
+      <hr>
+
+      <h3>Technologies used</h3>
+      <% @catalog_item.technologies.each do |t| %>
+        <p><%= t.name %></p>
+      <% end %>
+
+    </div>
+  </div>
+</div>
