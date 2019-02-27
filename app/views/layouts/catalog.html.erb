@@ -14,7 +14,7 @@
 
   <body>
     <%= render "shared/catalog_navbar" %>
-    <%= render "shared/catalog_header" %>
+    <%= render "shared/catalog_header" unless logged_in?(:site_admin)%>
     <%= yield %>
     <%= render "shared/catalog_footer" %>
     <%= source_helper%>
