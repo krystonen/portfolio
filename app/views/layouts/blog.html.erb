@@ -15,6 +15,7 @@
 
   <body>
     <div class="container">
+      <%= render "shared/blog_navhead" %>
       <%= render "shared/blog_nav" %>
       <%= render "shared/blog_jumbotron" %>
     </div>
@@ -25,14 +26,7 @@
         <%= render "shared/blog_sidebar" %>
       </div>
     </div>
-
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-        <%= source_helper %>
-      </p>
-    </footer>
-
+    <%= render "shared/blog_footer" %>
+     <%= source_helper %>
   </body>
 </html>
