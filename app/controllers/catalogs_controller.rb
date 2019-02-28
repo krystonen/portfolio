@@ -6,7 +6,7 @@ class CatalogsController < ApplicationController
          site_admin: :all
 
   def index
-    @catalog_items = Catalog.all
+    @catalog_items = Catalog.by_position
   end
 
   def angular
