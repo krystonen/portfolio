@@ -2,11 +2,18 @@ class CatalogsController < ApplicationController
   before_action :set_catalog_item, only: [:edit, :update, :show, :destroy]
   layout 'catalog'
   access all: [:show, :index, :angular],
-         user: {except: [:destroy, :new, :create, :update, :edit]},
+         user: {except: [:destroy, :new, :create, :update, :edit, :sort]},
          site_admin: :all
 
   def index
-    @catalog_items = Catalog.all
+    @catalog_items = Catalog.by_position
+  end
+
+  def sort
+    params[:order]. each do |key, value|
+      Catalog.find(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
   end
 
   def angular
