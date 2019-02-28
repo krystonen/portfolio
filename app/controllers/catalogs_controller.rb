@@ -9,6 +9,13 @@ class CatalogsController < ApplicationController
     @catalog_items = Catalog.by_position
   end
 
+  def sort
+    params[:order]. each do |key, value|
+      Catalog.find(value[:id]).update(position: value[:position])
+    end
+    render nothing: true
+  end
+
   def angular
     @angular_catalog_items = Catalog.angular
   end
