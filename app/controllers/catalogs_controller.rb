@@ -2,7 +2,7 @@ class CatalogsController < ApplicationController
   before_action :set_catalog_item, only: [:edit, :update, :show, :destroy]
   layout 'catalog'
   access all: [:show, :index, :angular],
-         user: {except: [:destroy, :new, :create, :update, :edit]},
+         user: {except: [:destroy, :new, :create, :update, :edit, :sort]},
          site_admin: :all
 
   def index
