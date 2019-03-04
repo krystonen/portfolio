@@ -17,6 +17,7 @@
     <%= render "shared/catalog_header" unless logged_in?(:site_admin)%>
     <%= yield %>
     <%= render "shared/catalog_footer" %>
+    <%= alerts %>
     <%= source_helper%>
   </body>
 </html>

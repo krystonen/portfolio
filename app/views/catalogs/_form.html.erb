@@ -1,7 +1,7 @@
 <%= form_for(@catalog_item) do |f| %>
 <% if @catalog_item.errors.any? %>
     <%= @catalog_item.errors.full_messages.each do  |error| %>
-      <%= js add_gritter(error, :title => "Krisztina Kovari Portfolio", sticky: false) %>
+      <%= alert_generator error %>
     <% end  %>
   <% end %>
 
