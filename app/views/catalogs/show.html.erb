@@ -1,7 +1,7 @@
 <div class="container catalog-container">
   <div class="row">
     <div class="col-sm-7">
-      <%= image_tag @catalog_item.main_image.to_s, class:"img-fluid" %>
+      <%= image_tag catalog_img(@catalog_item.main_image.url,'main'), width: '100%' %>
     </div>
 
     <div class="col-sm-5">

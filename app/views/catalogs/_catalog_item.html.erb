@@ -1,6 +1,6 @@
 <div class="col-md-4">
   <div class="card mb-4 shadow-sm" data-id="<%=catalog_item.id%>">
-    <%= image_tag catalog_item.thumb_image.to_s, class:"card-img-top" unless catalog_item.thumb_image.nil? %>
+    <%= image_tag catalog_img(catalog_item.thumb_image.url,'thumb')%>
     <div class="card-body">
       <p class="card-text">
         <span><%= link_to catalog_item.title, portfolio_show_path(catalog_item) %></span> <%= catalog_item.subtitle %></p>
