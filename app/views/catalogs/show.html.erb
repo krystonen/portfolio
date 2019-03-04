@@ -1,7 +1,7 @@
-<div class="container">
+<div class="container catalog-container">
   <div class="row">
     <div class="col-sm-7">
-      <%= image_tag @catalog_item.main_image, class:"img-fluid" %>
+      <%= image_tag @catalog_item.main_image.to_s, class:"img-fluid" %>
     </div>
 
     <div class="col-sm-5">

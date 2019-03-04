@@ -62,7 +62,13 @@ class CatalogsController < ApplicationController
 
   private
     def catalog_params
-      params.require(:catalog).permit(:title, :subtitle, :body, technologies_attributes:[:name])
+      params.require(:catalog).permit(:title,
+                                      :subtitle,
+                                      :body,
+                                      :main_image,
+                                      :thumb_image,
+                                      technologies_attributes:[:name]
+                                      )
     end
     def set_catalog_item
       @catalog_item = Catalog.find(params[:id])
