@@ -22,7 +22,6 @@ class CatalogsController < ApplicationController
 
   def new
     @catalog_item = Catalog.new
-    3.times {@catalog_item.technologies.build}
   end
 
   def create
@@ -67,7 +66,7 @@ class CatalogsController < ApplicationController
                                       :body,
                                       :main_image,
                                       :thumb_image,
-                                      technologies_attributes:[:name]
+                                      technologies_attributes:[:id, :name, :_destroy]
                                       )
     end
     def set_catalog_item

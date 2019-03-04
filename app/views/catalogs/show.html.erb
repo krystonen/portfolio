@@ -6,20 +6,19 @@
 
     <div class="col-sm-5">
      <h1> <%= @catalog_item.title %> </h1>
-     <%= link_to "Edit this item", edit_catalog_path if logged_in?(:site_admin) %>
 
       <hr>
 
       <em> <%= @catalog_item.subtitle %> </em>
       <p> <%= @catalog_item.body %> </p>
-
       <hr>
-
       <h3>Technologies used</h3>
       <% @catalog_item.technologies.each do |t| %>
         <p><%= t.name %></p>
       <% end %>
-
+      <% if logged_in?(:site_admin) %>
+          <%= link_to "Edit this item", edit_catalog_path, class: 'btn btn-warning' %>
+      <% end %>
     </div>
   </div>
 </div>
