@@ -40,7 +40,7 @@ body {
 }
 
 .cover-container {
-  max-width: 55em;
+  max-width: 65em;
 }
 
 
@@ -147,4 +147,16 @@ body {
   color: white;
 }
 
+.tech-news {
+ color: black;
+ margin: 20px;
+}
 
+.tech-news a {
+ color: green;
+ margin: 20px;
+}
+
+.tech-news  > .card {
+  padding: 30px;
+}
