@@ -3,10 +3,7 @@
 
   <%= paginate @blogs %>
 
-  <% @topic.blogs.each do |topic| %>
-    <h2> <%= topic.title %> </h2>
-    <p> <%= topic.body %> </p>
-  <% end %>
+  <%= render @blogs %>
 
   <%= paginate @blogs %>
 
