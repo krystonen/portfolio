@@ -1,0 +1,13 @@
+<div class="col-md-8 blog-main">
+  <h1> <%=   @topic.title %></h1>
+
+  <%= paginate @blogs %>
+
+  <% @topic.blogs.each do |topic| %>
+    <h2> <%= topic.title %> </h2>
+    <p> <%= topic.body %> </p>
+  <% end %>
+
+  <%= paginate @blogs %>
+
+</div>

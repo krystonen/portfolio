@@ -2,7 +2,7 @@
   <h3 class="pb-4 mb-4 font-italic border-bottom">
     From the Firehose
   </h3>
-  <p> <%= link_to 'Write a new post', new_blog_path if logged_in?(:site_admin) %></p>
+
   <%= paginate @blogs %>
   <%= render @blogs %>
   <%= paginate @blogs %>
