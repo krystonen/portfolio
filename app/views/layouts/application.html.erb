@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author", content="">
-    <link rel="icon" href="../../favicon.ico">
 
     <title> <%= @page_title %></title>
     <meta name="keywords" content="<%= @seo_keywords %>" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <%= favicon_link_tag "favicon.ico" %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -33,7 +33,6 @@
 
       <%= render 'shared/application_footer'%>
       <%= alerts %>
-      <%= source_helper %>
     </div>
   </body>
 </html>
