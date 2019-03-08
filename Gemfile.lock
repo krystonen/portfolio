@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/krystonen/kovari_view_tool
-  revision: 131bcde7dbbcf584e024cad02cf1f86e8623e29d
+  revision: 214942c253dc7ff868274a5da9b5eb1d1ed8b0ca
   specs:
     kovari_view_tool (0.1.0)
 
@@ -51,10 +51,10 @@ GEM
     addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     arel (9.0.0)
-    autoprefixer-rails (9.4.9)
+    autoprefixer-rails (9.4.10.1)
       execjs
     aws-eventstream (1.0.1)
-    aws-partitions (1.141.0)
+    aws-partitions (1.143.0)
     aws-sdk-core (3.46.2)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
@@ -70,7 +70,7 @@ GEM
     aws-sigv4 (1.0.3)
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootsnap (1.4.0)
+    bootsnap (1.4.1)
       msgpack (~> 1.0)
     bootstrap (4.3.1)
       autoprefixer-rails (>= 9.1.0)
@@ -112,7 +112,7 @@ GEM
     equalizer (0.0.11)
     erubi (1.8.0)
     execjs (2.7.0)
-    ffi (1.9.25)
+    ffi (1.10.0)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     friendly_id (5.2.5)
@@ -129,7 +129,7 @@ GEM
       domain_name (~> 0.5)
     http-form_data (2.1.1)
     http_parser.rb (0.6.0)
-    i18n (1.5.3)
+    i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.8.0)
       activesupport (>= 4.2.0)
@@ -175,7 +175,7 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.4.0)
     minitest (5.11.3)
-    msgpack (1.2.6)
+    msgpack (1.2.7)
     multi_json (1.13.1)
     multipart-post (2.0.0)
     naught (1.1.0)
@@ -243,8 +243,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sassc (2.0.0)
-      ffi (~> 1.9.6)
+    sassc (2.0.1)
+      ffi (~> 1.9)
       rake
     sassc-rails (2.1.0)
       railties (>= 4.0.0)
