@@ -4,6 +4,32 @@
 @import "bootstrap";
 @import "jquery-ui";
 @import "gritter";
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,400');
+
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
+$brightgreen: #17A2B8;
+$white: #FFF;
+$grey: #8D8D8D;
+
+.navbar-brand {
+  font-weight: 100;
+  letter-spacing: 0.2em;
+}
+
+.text-white {
+  font-weight: 100 !important;
+}
 
 .jumbotron {
   padding-top: 3rem;
@@ -11,6 +37,7 @@
   margin-bottom: 0;
   background-color: #fff;
 }
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
@@ -36,10 +63,33 @@ footer {
 }
 
 footer p {
+  font-weight: 100;
   margin-bottom: .25rem;
 }
 
+footer a {
+  color: $brightgreen;
+}
+
+footer a:hover, a:focus {
+  color: $grey;
+  text-decoration: none;
+}
 // catalog
 .catalog-container {
   padding-top: 20px;
+}
+
+.card-text {
+ font-weight: 400;
+letter-spacing: 0.1em;
+}
+
+.card-text a {
+  color: $brightgreen;
+}
+
+.card-text a:hover, a:focus {
+  color: $grey;
+  text-decoration: none;
 }
