@@ -6,6 +6,20 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "kkovari.jpg", class:"img-fluid", alt: "profile image" %>
+
+         <div class="skills mt-3 mb-3">
+          <% @skills.each do |skill| %>
+            <h4> <%= skill.title %></h4>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning"
+                   role="progressbar"
+                   aria-valuenow="<%= skill.percent_utilized %>"
+                   aria-valuemax="100"
+                   style="width: <%= skill.percent_utilized %>%"
+              ></div>
+            </div>
+          <% end %>
+         </div>
       </div>
       <div class="col-md-8 text-left">
         <p>My name is Krisztina Kovari. I used to work in television broadcasting for many years. I specialized in video-on-demand services and worked on the operational side of the business where I interacted closely with clients, engineers and other stakeholders. I was always attracted to the technical aspects of my job and as a supervisor, problem solving was a big part of my daily tasks. </p>

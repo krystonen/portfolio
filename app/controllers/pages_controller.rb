@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def about
+    @skills = Skill.all
   end
 
   def contact
@@ -13,4 +14,5 @@ class PagesController < ApplicationController
   def tech_news
     @tweets = SocialTool.twitter_search
   end
+
 end
