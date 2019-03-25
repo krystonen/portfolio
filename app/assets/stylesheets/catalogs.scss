@@ -38,6 +38,7 @@ $grey: #8D8D8D;
   background-color: #fff;
 }
 
+
 @media (min-width: 768px) {
   .jumbotron {
     padding-top: 6rem;
@@ -55,6 +56,22 @@ $grey: #8D8D8D;
 
 .jumbotron .container {
   max-width: 40rem;
+}
+
+.btn-info {
+  text-shadow: none;
+  border: none;
+  outline: none;
+  transition: all .2s;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 .5rem  .5rem rgba(black,.2);
+  }
+  &::after{
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+    }
 }
 
 footer {
